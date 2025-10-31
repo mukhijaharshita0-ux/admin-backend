@@ -24,7 +24,9 @@ app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/auth", userRoutes);
-
+app.get("/",(req,res)=>{
+  res.send('welcome to our server');
+});
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
