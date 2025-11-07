@@ -15,12 +15,15 @@ connectDB();
 app.use(express.json());
 
 // CORS setup
-const corsOptions = {
-  origin: ["http://localhost:5173"], // frontend port
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  credentials: true,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: ["http://localhost:5173"], // frontend port
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+//   credentials: true,
+// };
+
+    app.use(cors());
+
+// app.use(cors(corsOptions));
 
 // Routes
 app.use("/api/auth", userRoutes);
